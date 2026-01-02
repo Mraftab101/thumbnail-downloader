@@ -136,42 +136,6 @@
             font-weight: bold;
         }
         
-        /* SOCIAL & CONTACT */
-        .social-contact {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .contact-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        
-        .contact-btn {
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .whatsapp-btn {
-            background: #25D366;
-        }
-        
-        .facebook-btn {
-            background: #1877F2;
-        }
-        
         /* FOOTER */
         .footer {
             background: #222;
@@ -180,13 +144,26 @@
             text-align: center;
         }
         
-        .contact-info {
+        .footer-info {
             margin: 20px 0;
+            color: #ccc;
         }
         
-        .contact-item {
-            margin: 10px 0;
-            color: #ccc;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 600px) {
@@ -194,14 +171,10 @@
                 grid-template-columns: 1fr;
             }
             
-            .contact-buttons {
+            .footer-links {
                 flex-direction: column;
                 align-items: center;
-            }
-            
-            .contact-btn {
-                width: 100%;
-                max-width: 250px;
+                gap: 10px;
             }
         }
     </style>
@@ -240,44 +213,26 @@
                     <!-- Thumbnails will appear here -->
                 </div>
             </div>
-            
-            <!-- SOCIAL & CONTACT -->
-            <div class="social-contact">
-                <h2>Contact & Support</h2>
-                <p>For help or suggestions, contact us:</p>
-                
-                <div class="contact-buttons">
-                    <a href="https://wa.me/923417661309" target="_blank" class="contact-btn whatsapp-btn">
-                        📱 WhatsApp Support
-                    </a>
-                    <a href="https://facebook.com/ali.vlogs.5059" target="_blank" class="contact-btn facebook-btn">
-                        📘 Facebook Page
-                    </a>
-                    <button class="contact-btn" style="background: #ff0000;" onclick="shareOnWhatsApp()">
-                        🔗 Share This Tool
-                    </button>
-                </div>
-            </div>
         </div>
         
         <!-- FOOTER -->
         <div class="footer">
-            <h3>YouTube Thumbnail Downloader</h3>
+            <h3>Free YouTube Tools</h3>
             
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📱 WhatsApp:</strong> +92 341 7661309
-                </div>
-                <div class="contact-item">
-                    <strong>📘 Facebook:</strong> Ali Vlogs
-                </div>
-                <div class="contact-item">
-                    <strong>📍 Based in Pakistan</strong>
-                </div>
+            <div class="footer-info">
+                <p>Free tool for content creators worldwide</p>
+                <p>Download HD quality thumbnails instantly</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">FAQ</a>
             </div>
             
             <p style="color: #999; margin-top: 20px; font-size: 0.9rem;">
-                © 2024 Ali Vlogs Tools - Free for Pakistani Creators
+                © 2024 YouTube Thumbnail Downloader - Free Tool for Global Users
             </p>
         </div>
     </div>
@@ -350,13 +305,11 @@
                     videoId = videoId.substring(0, questionMarkPosition);
                 }
             }
+            else if (url.includes('youtube.com/shorts/')) {
+                videoId = url.split('shorts/')[1];
+            }
             
             return videoId.length === 11 ? videoId : null;
-        }
-        
-        function shareOnWhatsApp() {
-            const text = "Check this free YouTube Thumbnail Downloader: " + window.location.href;
-            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
         }
         
         document.getElementById('youtubeUrl').addEventListener('click', function() {
@@ -370,4 +323,4 @@
         });
     </script>
 </body>
-</html>
+    </html>
