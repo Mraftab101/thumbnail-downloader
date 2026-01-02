@@ -19,7 +19,7 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             border-radius: 15px;
@@ -46,6 +46,33 @@
             margin-bottom: 25px;
         }
         
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
         /* MAIN CONTENT */
         .main-content {
             padding: 40px 30px;
@@ -57,6 +84,15 @@
             border-radius: 10px;
             margin-bottom: 30px;
             border: 2px solid #eee;
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
         .url-input {
@@ -73,6 +109,15 @@
             border-color: #ff0000;
         }
         
+        .example {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            color: #856404;
+            font-size: 0.9rem;
+        }
+        
         .download-btn {
             background: #ff0000;
             color: white;
@@ -83,11 +128,45 @@
             border-radius: 8px;
             cursor: pointer;
             width: 100%;
+            margin-top: 15px;
             transition: background 0.3s;
         }
         
         .download-btn:hover {
             background: #cc0000;
+        }
+        
+        /* FEATURES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ff0000;
+        }
+        
+        .feature h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            color: #666;
+            font-size: 0.9rem;
         }
         
         /* THUMBNAILS */
@@ -122,6 +201,12 @@
             padding: 15px;
         }
         
+        .thumbnail-info h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
         .quality-btn {
             background: #28a745;
             color: white;
@@ -136,45 +221,148 @@
             font-weight: bold;
         }
         
+        .quality-btn:hover {
+            background: #218838;
+        }
+        
+        /* AD SPACE */
+        .ad-space {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            color: #666;
+            border: 2px dashed #ced4da;
+        }
+        
+        /* SOCIAL */
+        .social-share {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .social-share h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 150px;
+            justify-content: center;
+        }
+        
+        .whatsapp { background: #25D366; }
+        .facebook { background: #1877F2; }
+        
         /* FOOTER */
         .footer {
             background: #222;
             color: white;
-            padding: 30px;
-            text-align: center;
+            padding: 40px 30px 20px;
+            margin-top: 40px;
         }
         
-        .footer-info {
-            margin: 20px 0;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p {
             color: #ccc;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
         }
         
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        
-        .footer-link {
-            color: #4dabf7;
+        .footer-section a {
+            display: block;
+            color: #ccc;
+            margin: 8px 0;
             text-decoration: none;
         }
         
-        .footer-link:hover {
-            text-decoration: underline;
+        .footer-section a:hover {
+            color: white;
         }
         
-        @media (max-width: 600px) {
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                gap: 15px;
+            }
+            
+            .stat-item {
+                min-width: 100px;
+                padding: 12px 15px;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+            
+            .input-section {
+                padding: 20px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
             .thumbnail-grid {
                 grid-template-columns: 1fr;
             }
             
-            .footer-links {
+            .share-buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 10px;
+            }
+            
+            .share-btn {
+                width: 100%;
+                max-width: 250px;
             }
         }
     </style>
@@ -185,55 +373,137 @@
         <div class="header">
             <h1>YouTube Thumbnail Downloader</h1>
             <p>Download High Quality YouTube Thumbnails for Free - 100% Working</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Daily Downloads</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free Service</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">⚡</span>
+                    <span class="stat-label">Instant Download</span>
+                </div>
+            </div>
         </div>
         
         <!-- MAIN CONTENT -->
         <div class="main-content">
+            <!-- INPUT SECTION -->
             <div class="input-section">
-                <h2>Paste YouTube Video URL</h2>
+                <h2 class="section-title">
+                    📥 Paste YouTube Video URL
+                </h2>
+                
                 <input type="url" 
                        class="url-input" 
                        id="youtubeUrl" 
                        placeholder="https://www.youtube.com/watch?v=..."
                        required>
                 
-                <p style="color: #666; margin: 10px 0; font-size: 0.9rem;">
+                <p class="example">
                     <strong>Example:</strong> https://www.youtube.com/watch?v=dQw4w9WgXcQ
                 </p>
                 
                 <button class="download-btn" onclick="getThumbnails()">
                     🚀 GET THUMBNAILS NOW
                 </button>
+                
+                <!-- FEATURES -->
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">✅</div>
+                        <h4>No Watermark</h4>
+                        <p>Clean thumbnails without watermark</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🖼️</div>
+                        <h4>HD Quality</h4>
+                        <p>HD, Full HD & 4K resolution</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🔓</div>
+                        <h4>No Registration</h4>
+                        <p>Use directly without signup</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <h4>Mobile Friendly</h4>
+                        <p>Works on all devices</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AD SPACE 1 -->
+            <div class="ad-space" id="ad1">
+                <h3>Advertisement Space</h3>
+                <p>Your ad can be displayed here</p>
             </div>
             
             <!-- THUMBNAIL SECTION -->
             <div class="thumbnail-section" id="thumbnailSection">
-                <h2>Available Thumbnails</h2>
+                <h2 class="section-title">
+                    📸 Available Thumbnails
+                </h2>
+                
                 <div class="thumbnail-grid" id="thumbnailGrid">
                     <!-- Thumbnails will appear here -->
+                </div>
+            </div>
+            
+            <!-- AD SPACE 2 -->
+            <div class="ad-space" id="ad2">
+                <h3>Premium Advertisement</h3>
+                <p>High-visibility ad space</p>
+            </div>
+            
+            <!-- SOCIAL SHARE -->
+            <div class="social-share">
+                <h3>Share This Tool</h3>
+                <div class="share-buttons">
+                    <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
+                        📱 WhatsApp
+                    </button>
+                    <button class="share-btn facebook" onclick="shareOnFacebook()">
+                        📘 Facebook
+                    </button>
                 </div>
             </div>
         </div>
         
         <!-- FOOTER -->
         <div class="footer">
-            <h3>Free YouTube Tools</h3>
-            
-            <div class="footer-info">
-                <p>Free tool for content creators worldwide</p>
-                <p>Download HD quality thumbnails instantly</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YouTube Tools</h3>
+                    <p>Free tools for content creators</p>
+                    <p>100% free with no hidden charges</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Support</h3>
+                    <p>Having issues or suggestions?</p>
+                    <button class="quality-btn" style="background:#ff0000; margin-top:10px;">
+                        Contact Support
+                    </button>
+                </div>
             </div>
             
-            <div class="footer-links">
-                <a href="#" class="footer-link">Privacy Policy</a>
-                <a href="#" class="footer-link">Terms of Service</a>
-                <a href="#" class="footer-link">Contact</a>
-                <a href="#" class="footer-link">FAQ</a>
+            <div class="copyright">
+                <p>© 2024 YouTube Thumbnail Downloader. All rights reserved.</p>
+                <p>This tool is for educational purposes only.</p>
             </div>
-            
-            <p style="color: #999; margin-top: 20px; font-size: 0.9rem;">
-                © 2024 YouTube Thumbnail Downloader - Free Tool for Global Users
-            </p>
         </div>
     </div>
 
@@ -259,8 +529,8 @@
             const qualities = [
                 { name: 'Max Quality', code: 'maxresdefault' },
                 { name: 'HD Quality', code: 'sddefault' },
-                { name: 'Medium', code: 'mqdefault' },
-                { name: 'Standard', code: 'default' }
+                { name: 'Medium Quality', code: 'mqdefault' },
+                { name: 'Standard Quality', code: 'default' }
             ];
             
             let html = '';
@@ -272,13 +542,13 @@
                     <div class="thumbnail-card">
                         <img src="${thumbnailUrl}" 
                              class="thumbnail-img"
-                             onerror="this.src='https://via.placeholder.com/400x225/ff0000/ffffff?text=Thumbnail+Error'">
+                             onerror="this.src='https://via.placeholder.com/400x225/ff0000/ffffff?text=Thumbnail+Not+Available'">
                         <div class="thumbnail-info">
                             <h4>${quality.name}</h4>
                             <a href="${thumbnailUrl}" 
                                download="thumbnail-${videoId}-${quality.code}.jpg" 
                                class="quality-btn">
-                               ⬇️ Download
+                               ⬇️ Download ${quality.name}
                             </a>
                         </div>
                     </div>
@@ -286,6 +556,9 @@
             });
             
             document.getElementById('thumbnailGrid').innerHTML = html;
+            
+            // Show ads
+            showAds();
         }
         
         function extractVideoId(url) {
@@ -312,10 +585,33 @@
             return videoId.length === 11 ? videoId : null;
         }
         
+        function showAds() {
+            document.getElementById('ad1').innerHTML = `
+                <h3>Ad Space</h3>
+                <p>Google AdSense will show ads here</p>
+            `;
+            
+            document.getElementById('ad2').innerHTML = `
+                <h3>Premium Ad</h3>
+                <p>High paying ads appear here</p>
+            `;
+        }
+        
+        function shareOnWhatsApp() {
+            const text = "Check this free YouTube Thumbnail Downloader: " + window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        
+        function shareOnFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
+        }
+        
+        // Auto-select URL
         document.getElementById('youtubeUrl').addEventListener('click', function() {
             this.select();
         });
         
+        // Enter key support
         document.getElementById('youtubeUrl').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 getThumbnails();
@@ -323,4 +619,4 @@
         });
     </script>
 </body>
-    </html>
+</html>
